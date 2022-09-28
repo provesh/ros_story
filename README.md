@@ -3,3 +3,103 @@ my first project
 
 바보~ 희희~
 22/9/28
+
+### 2022/9/27
+노드 : 프로그램 같은것
+
+패키지 : 하나 이상의 노드를 묶어 놓은것. 패키지를 묶을수도 있는데 그것은 메타패키지라고 함.
+
+마스터 : 노드와노드 사이의 연결 및 메시지 통신을 위한 서버와 같은 역할.
+마스터 없이는 노드간 접속, 토픽, 서비스와 같은 통신을 할 수 없음.
+노드(프로그램)끼리 이미 이어져있으면 마스터(서버)를 꺼도 상관없음.
+
+publisher -> Topic -> subscriber
+ (제공자)    (주제)	(구독자)
+
+- 정보가 단방향으로만 흘러간다.
+- 1대N 가능
+
+service server -> service -> service client
+    (서버)	(서비스 요청)   (클라이언트)
+
+- 정보가 양방향으로 흘러간다.
+- 1대1만 가능
+
+액션은 피드백을 전달함.
+
+서버가 항상 먼저 열려 있어야 한다.
+
+하나의 노드가 여러가지 역할을 할 수 있다.
+
+- my_publisher, my_subscriber 노드 생성
+- 빌드
+- 생성
+
+### 22/9/28
+노드의 이름을 정할때 띄어쓰기 안됨
+토픽의 이름을 통일할것(퍼블리셔와 서브스크라이버)
+영문자의 대소문자를 정확히 맞출것
+
+어떤 이벤트가 발생했을때 호출하는 함수
+
+#!/usr/bin/python = 이 파일을 실행할때 이 경로에 있는 파이썬을 써라! 라는 의미
+리눅스를 쓸때 위에 쓴건 꼭 써주자.
+
+rqt_graph <- 그래프를 보여주는 신기한 cmd 명령어
+
+- topic_tutorial 패키지에 python scripts 추가
+- py_publisher.py, py_subscriber.py 노드 생성
+- 빌드
+- 실행
+
+- topic_second 패키지 생성
+- second_pub, second_sub, py_second_pub.py, py.second_sub.py 노드 생성
+- 빌드
+- 실행
+
+- 과제 1
+
+### ROS 명령어
+### roscore
+- ROS Master를 실행한다.
+- 노드를 켜기전 가장 먼저 실행
+'''bash
+    roscore
+'''
+
+### rosrun
+- 노드를 실행한다.
+- rosrun (패키지이름) (노드이름)
+'''bash
+    rosrun <패키지이름><노드이름>
+'''
+
+### 리눅스 명령어
+ls
+cd
+cs
+cm
+
+### catkin_create_pkg
+- 현재 위치한 작업 공간에 패키지를 생성한다.
+- catkin_create_pkg (패키지이름) 의존선
+'''bash
+    catkin_create_pkg <패키지이름> <의존성1>
+    <의존성2> ....
+'''
+
+'''bash
+    catkin_create_pkg topic_tutorial roscpp
+    rospy std_msgs
+'''
+
+#include "std_msgs/Int32.h"
+1byte = 8bit
+int 32bit = int 4byte
+용량을 미리 정해서 이걸 쓰겠다고 선언
+
+###catkin_create_pkg topic_test roscpp rospy std_msgs
+'''bash
+    패키지 만들기
+'''
+
