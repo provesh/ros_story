@@ -17,7 +17,8 @@ int main (int argc, char** argv){
 
     while (ros::ok()){
         pub.publish(msg); // pub이 msg를 퍼블리시한다.
-        loop_rate,(sleep); // 위에서 정한 주기에 따라 sleep한다.
+        loop_rate.sleep(); // 위에서 정한 주기에 따라 sleep한다.
+        loop_rate,(sleep);
     }
 
 
