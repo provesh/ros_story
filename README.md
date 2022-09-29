@@ -110,6 +110,12 @@ int 32bit = int 4byte
     - msg_publisher, msg_subscriber, py_msg_pub.py, py_msg_sub.py 노드 생성
     - 빌드
     - 실행
+- [service_tutorial](./service_tutorial)
+    - service_tutorial 패키지 생성
+    - srv 디렉토리에 AddTwoints 생성
+    - my_server.cpp, my_client.cpp, py_server.py, py_client.py 생성
+    - 빌드
+    - 실행
 
 # msg_tutorial
 직접 작성한 Mymsg 메시지로 통신하는 패키지
@@ -126,3 +132,5 @@ int 32bit = int 4byte
 3. 안의 내용을 작성한다.
 4. CMakelists.txt에서 설정한다.
 5. 빌드 시 생성된다.
+
+### 
