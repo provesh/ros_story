@@ -133,4 +133,16 @@ int 32bit = int 4byte
 4. CMakelists.txt에서 설정한다.
 5. 빌드 시 생성된다.
 
-### 
+### 22/9/30
+- [과제 2 yh_star](./yh_star)
+    - for문 활용해서 별 찍기
+        - yh_star패키지 생성
+        - yh_star_pub, yh_star-sub, yh_star_pub.py, yh_star_sub.py 생성
+        - 빌드
+        - 실행
+
+- [과제 2 yh_service](./yh_service)
+    - yh_sevice 패키지 생성
+    - yh_service, yh_clientm yh_server.py, yh_client.py 생성
+    - 빌드
+    - 생성
