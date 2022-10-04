@@ -21,7 +21,7 @@ int main (int argc, char** argv)
     while (ros::ok())
     {
         pub.publish(msg); // pub이 msg 퍼블리싱
-        loop_rate,(sleep); // 주기에 따라 sleep한다.
+        loop_rate.sleep(); // 주기에 따라 sleep한다.
         msg.data ++; // 0인 데이터에 while문을 따라 1씩 증가시킨다.
         if (msg.data == 101 )
         {

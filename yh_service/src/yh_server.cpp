@@ -13,7 +13,7 @@ int main(int argc, char** argv)
     ros::init(argc, argv, "yh_server");
     ros::NodeHandle nh;
 
-    ros::ServiceServer yh_server = nh.advertiseService("multiply", multiply, 100,);
+    ros::ServiceServer yh_server = nh.advertiseService("multiply", multiply);
 
     ros::spin();
 

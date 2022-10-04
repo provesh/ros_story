@@ -1,7 +1,7 @@
-# include "res/ros.h"
+# include "ros/ros.h"
 # include "yh_star/YhStarMsg.h"
 
-voidmsgCallback(const yh_star::YhStarMsg::ConstPtr& msg)
+void msgCallback(const yh_star::YhStarMsg::ConstPtr& msg)
 {
     int n = msg->data;
     for (int i=0;i < n/2;i++)
@@ -12,9 +12,9 @@ voidmsgCallback(const yh_star::YhStarMsg::ConstPtr& msg)
         }
         printf("\n");
     }
-    for (int i=n/2;i < n/;i++)
+    for (int i=n/2;i < n/2;i++)
     {
-        for(int j =0; j = n; j > i; j--)
+        for(int j = n; j > i; j--)
         {
             printf("*");
         }
@@ -24,10 +24,12 @@ voidmsgCallback(const yh_star::YhStarMsg::ConstPtr& msg)
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv, "yh_star_sub")
-    ros::NodeHandle nh
+    ros::init(argc, argv, "yh_star_sub");
+    ros::NodeHandle nh;
 
-    ros::Subscriber sub = nh.subscribe("yh_start_topic", 10)
+    ros::Subscriber sub = nh.subscribe("yh_star_topic", 10, msgCallback());
 
-    ros::spin
+    ros::spin();
+
+    return 0;
 }
