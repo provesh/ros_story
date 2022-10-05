@@ -151,10 +151,9 @@ add_dependencies(msg_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXP
 target_link_libraries(msg_publisher
   ${catkin_LIBRARIES}
 )
-  target_link_libraries(msg_subscriber
+target_link_libraries(msg_subscriber
   ${catkin_LIBRARIES}
 )
-
 #############
 ## Install ##
 #############
@@ -165,7 +164,7 @@ target_link_libraries(msg_publisher
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  scripts/py_msg_pub.py scripts/py_msg_sub.py 
+  scripts/py_msg_pub.py scripts/py_msg_sub.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

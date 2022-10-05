@@ -147,7 +147,6 @@ add_executable(my_subscriber src/my_subscriber.cpp)
 add_dependencies(my_publisher ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(my_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-
 ## Specify libraries to link a library or executable target against
 target_link_libraries(my_publisher ${catkin_LIBRARIES})
 target_link_libraries(my_subscriber ${catkin_LIBRARIES})

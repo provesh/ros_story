@@ -57,7 +57,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  AddTwoints.srv
+  AddTwoInts.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -144,8 +144,8 @@ add_executable(my_client src/my_client.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies (my_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies (my_client ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(my_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(my_client ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(my_server
@@ -154,8 +154,6 @@ target_link_libraries(my_server
 target_link_libraries(my_client
   ${catkin_LIBRARIES}
 )
-
-
 #############
 ## Install ##
 #############

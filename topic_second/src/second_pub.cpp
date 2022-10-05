@@ -3,12 +3,12 @@
 
 int main(int argc, char** argv)
 {
-    ros::init(argc,argv, "second_pub");
+    ros::init(argc, argv, "second_pub");
     ros::NodeHandle nh;
 
     ros::Publisher pub = nh.advertise<std_msgs::Int32>("my_count", 100);
 
-    ros::Rate loop_rate(0.3);
+    ros::Rate loop_rate(2);
 
     std_msgs::Int32 msg;
     msg.data = 0;

@@ -1,9 +1,9 @@
-# include "ros/ros.h"
-# include "yh_star/YhStarMsg.h"
+#include "ros/ros.h"
+#include "yh_star/YhStarMsg.h"
 
 int main(int argc, char** argv)
 {
-    ros::init(argc,argv, "yh_star_pub");
+    ros::init(argc, argv, "yh_star_pub");
     ros::NodeHandle nh;
 
     ros::Publisher pub = nh.advertise<yh_star::YhStarMsg>("yh_star_topic", 5);
@@ -13,7 +13,7 @@ int main(int argc, char** argv)
     yh_star::YhStarMsg msg;
     msg.data = 1;
 
-    while(ros::ok())
+    while (ros::ok())
     {
         msg.stamp = ros::Time::now();
         pub.publish(msg);

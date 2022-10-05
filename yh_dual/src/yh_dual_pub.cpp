@@ -9,7 +9,6 @@ int main(int argc, char** argv)
     ros::Publisher pub = nh.advertise<yh_dual::YhDual>("yh_dual_topic", 100);
 
     ros::Rate loop_rate(8);
-
     yh_dual::YhDual msg;
 
     while (ros::ok())

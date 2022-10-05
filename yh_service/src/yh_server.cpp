@@ -1,10 +1,11 @@
 #include "ros/ros.h"
 #include "yh_service/YhSrv.h"
 
-bool multiply(yh_service::YhSrv::Request& req, yh_service::YhSrv::Response& res)
+bool multiply(yh_service::YhSrv::Request& req,
+            yh_service::YhSrv::Response& res)
 {
     res.result = req.a * req.b;
-    ROS_INFO("a : %d b : %d result : %d", req.a, req.b, res.result);
+    ROS_INFO("a:%d, b:%d, result=%d", req.a, req.b, res.result);
     return true;
 }
 

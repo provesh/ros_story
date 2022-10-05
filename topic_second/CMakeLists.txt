@@ -105,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES topic_second
-#  CATKIN_DEPENDS rocpp rospy std_msgs
+#  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -154,6 +154,7 @@ target_link_libraries(second_pub
 target_link_libraries(second_sub
   ${catkin_LIBRARIES}
 )
+
 #############
 ## Install ##
 #############
@@ -164,7 +165,7 @@ target_link_libraries(second_sub
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  src/scripts/py_second_pub.py src/scripts/py_second_sub.py
+  scripts/py_second_pub.py scripts/py_second_sub.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

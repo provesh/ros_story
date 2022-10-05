@@ -11,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   roscpp
   rospy
-  std_msg
+  std_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -57,7 +57,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  yh_difference.srv
+  YhDifference.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -70,7 +70,7 @@ add_service_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  std_msgs  # Or other packages containing msgs
+  std_msgs
 )
 
 ################################################
@@ -105,7 +105,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
  LIBRARIES yh_difference
-#  CATKIN_DEPENDS message_generation roscpp rospy std_msg
+#  CATKIN_DEPENDS message_generation roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -144,18 +144,16 @@ add_executable(yh_difference_client src/yh_difference_client.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(yh_difference_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(yh_difference_client ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
+add_dependencies(yh_difference_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(yh_difference_server
-  ${catkin_LIBRARIES}
-)
 target_link_libraries(yh_difference_client
   ${catkin_LIBRARIES}
 )
-
+target_link_libraries(yh_difference_server
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############
@@ -165,10 +163,10 @@ target_link_libraries(yh_difference_client
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+catkin_install_python(PROGRAMS
+  scripts/yh_difference_client.py scripts/yh_difference_server.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html

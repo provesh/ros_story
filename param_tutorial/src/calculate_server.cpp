@@ -6,11 +6,12 @@
 #define MULTIPLICATION 3
 #define DIVISION 4
 
-int my_operater = PLUS;
+int my_operator = PLUS;
 
-bool calculation(param_tutorial::Calculate::Request& req, param_tutorial::Calculate::Response& res)
+bool calculation(param_tutorial::Calculate::Request& req,
+                param_tutorial::Calculate::Response& res)
 {
-    switch (my_operater)
+    switch (my_operator)
     {
         case PLUS:
             res.result = req.a + req.b;
@@ -28,23 +29,23 @@ bool calculation(param_tutorial::Calculate::Request& req, param_tutorial::Calcul
             res.result = req.a + req.b;
             break;
     }
-    ROS_INFO("a = %d, b = %d, result = %d", req.a, req.b, res.result);
+    ROS_INFO("a: %d, b: %d, result: %d", req.a, req.b, res.result);
     return true;
 }
 
-int main (int argc, char** argv)
+int main(int argc, char** argv)
 {
     ros::init(argc, argv, "calculate_server");
     ros::NodeHandle nh;
 
-    nh.setParam("calculation_method", PLUS); // 파라미터 초기 설정. 이미 값이 설정되어있다면 값을 바꾸어준다.
+    nh.setParam("calculation_method", PLUS); // 파라미터 초기 설정
 
-    ros::ServiceServer calculation_server = nh.advertiseService("calculate", calculation);
+    ros::ServiceServer calculate_server = nh.advertiseService("calculate", calculation);
 
     ros::Rate loop_rate(10);
-    while(ros::ok())
+    while (ros::ok())
     {
-        nh.getParam("calculation_method", my_operater); // 설정된 파라미터의 값을 가져온다.
+        nh.getParam("calculation_method", my_operator);
         ros::spinOnce();
         loop_rate.sleep();
     }

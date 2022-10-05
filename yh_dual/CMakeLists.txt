@@ -146,19 +146,20 @@ add_executable(yh_dual_int src/yh_dual_int.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(yh_dual_pub ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(yh_dual_time ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(yh_dual_int ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(yh_dual_time ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(yh_dual_pub
+target_link_libraries(yh_dual_int
   ${catkin_LIBRARIES}
 )
 target_link_libraries(yh_dual_time
   ${catkin_LIBRARIES}
 )
-target_link_libraries(yh_dual_int
+target_link_libraries(yh_dual_pub
   ${catkin_LIBRARIES}
 )
+
 #############
 ## Install ##
 #############
@@ -168,10 +169,10 @@ target_link_libraries(yh_dual_int
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+catkin_install_python(PROGRAMS
+  scripts/yh_dual_pub.py scripts/yh_dual_int.py scripts/yh_dual_time.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html

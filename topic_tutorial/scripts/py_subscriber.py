@@ -9,10 +9,9 @@ def msgCallback(msg):
 
 def listener():
     rospy.init_node("py_subscriber")
-    rospy.Subscriber("my_topic", String, msgCallback ,queue_size = 100)
+    rospy.Subscriber("my_topic", String, msgCallback, queue_size=100)
 
     rospy.spin()
-
 
 if __name__ == "__main__":
     listener()

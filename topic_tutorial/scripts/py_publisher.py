@@ -10,7 +10,7 @@ def talker():
     loop_rate = rospy.Rate(10)
 
     msg = String()
-    msg.data = "꺼내줘"
+    msg.data = "Hi"
 
     while not rospy.is_shutdown():
         pub.publish(msg)
@@ -21,4 +21,3 @@ if __name__ == "__main__":
         talker()
     except rospy.ROSInterruptException:
         pass
-
