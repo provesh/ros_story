@@ -167,29 +167,19 @@ user@gmail.com:$~ rosparam get <파라미터 이름>
 user@gmail.com:$~ rosparam set <파라미터 이름> [파라미터 값]
 '''
 
+### teleop-twist_keyboard pkg
+- input keyboard /cmd_vel topic의 geometry_msgs/Twist message publishing node.
+- install
+
+'''bash
+sudo
+
 ### [param_tutorial](./param_tutorial)
 - param_tutorial 패키지 생성
 - calculate_server, calculate_client, calculate_server.py, calculate_client.py 노드 생성
 - 빌드
 - 실행
-- [파라미터 서버 활용](#paremeter_server)
-<<<<<<< HEAD
 
-## 2022/10/5
-### [과제6 yh_check](./yh_check)
-- [과제6](./yh_check/과제6.pdf)
-    - yh_check 패키지 생성
-    - yh_check_distance.cpp, yh_check_camera.cpp, yh_check_sub.cpp, yh_check_distance.py, yh_check_camera.py, yh_check_sub.py 노드 생성
-    - 빌드
-    - 실행
-    - 파이썬 클래스로 작성
-
-### [과제7 yh_connect](./yh_connect)
-- [과제7](./yh_connect/과제7.pdf)
-    - yh_connect 패키지 생성
-    - yh_connect_pub.cpp, yh_connect_sub.cpp, yh_connect_sub_pub.cpp, yh_connect_pub.py, yh_connect_sub.py, yh_connect_sub_pub.py
-    - 빌드
-    - 실행
-    - 오류나는중
-=======
->>>>>>> 9482e475d5c48bf132bb64d91c35cc6e6250265d
+## 22/10/6
+### [yh_turtle](.yh_turtle)
+- yh_turtle
