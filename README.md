@@ -154,17 +154,17 @@ int 32bit = int 4byte
 - rosparam list
     - 파라미터 서버의 모든 파라미터를 출력
 '''bash
-tjdgusdlazzzz@gmail.com:$~ rosparam list
+user@gmail.com:$~ rosparam list
 '''
 - rosparam get <파라미터의 이름>
     - 파라미터의 값을 출력함
 '''bash
-tjdgusdlazzzz@gmail.com:$~ rosparam get <파라미터 이름>
+user@gmail.com:$~ rosparam get <파라미터 이름>
 '''
 - rosparam set <파라미터 이름> [파라미터 값]
     - 파라미터의 값을 지정함
 '''bash
-tjdgusdlazzzz@gmail.com:$~ rosparam set <파라미터 이름> [파라미터 값]
+user@gmail.com:$~ rosparam set <파라미터 이름> [파라미터 값]
 '''
 
 ### [param_tutorial](./param_tutorial)
@@ -173,6 +173,7 @@ tjdgusdlazzzz@gmail.com:$~ rosparam set <파라미터 이름> [파라미터 값]
 - 빌드
 - 실행
 - [파라미터 서버 활용](#paremeter_server)
+<<<<<<< HEAD
 
 ## 2022/10/5
 ### [과제6 yh_check](./yh_check)
@@ -190,3 +191,5 @@ tjdgusdlazzzz@gmail.com:$~ rosparam set <파라미터 이름> [파라미터 값]
     - 빌드
     - 실행
      
+=======
+>>>>>>> 9482e475d5c48bf132bb64d91c35cc6e6250265d
