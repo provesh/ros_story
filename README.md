@@ -190,6 +190,6 @@ user@gmail.com:$~ rosparam set <파라미터 이름> [파라미터 값]
     - yh_connect_pub.cpp, yh_connect_sub.cpp, yh_connect_sub_pub.cpp, yh_connect_pub.py, yh_connect_sub.py, yh_connect_sub_pub.py
     - 빌드
     - 실행
-     
+    - 오류나는중
 =======
 >>>>>>> 9482e475d5c48bf132bb64d91c35cc6e6250265d
