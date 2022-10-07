@@ -183,3 +183,10 @@ sudo
 ## 22/10/6
 ### [yh_turtle](.yh_turtle)
 - yh_turtle
+
+## 22/10/7
+### [yh_turtle](.yh_turtle)
+- yh_turtle_circle,yh_turtle_circle_copy, yh_turtle_triangle, turtle_goal.py 노드 생성
+- 빌드
+- 실행
+
